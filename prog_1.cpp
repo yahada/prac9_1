@@ -36,11 +36,13 @@ int det(const int * a, size_t n) {
     }
     try {
       d+=(pivot * det(minor, n-1)) * (l%2) ? -1: 1;
+      delete[] minor;
     }
     catch(...) {
       delete[] minor;
       throw;
     }
+
     
     
   }
